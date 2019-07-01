@@ -13,7 +13,7 @@
  * @category
  */
 
-namespace Render;
+namespace JidaRender;
 
 use Jida\Manager\Excepcion;
 use Jida\Core\Rutas;

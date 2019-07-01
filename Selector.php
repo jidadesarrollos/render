@@ -8,7 +8,7 @@
  * @version
  */
 
-namespace Render;
+namespace JidaRender;
 
 use Exception as Excepcion;
 use Jida\Medios\Debug;

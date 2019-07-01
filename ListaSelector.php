@@ -3,7 +3,7 @@
  *  Genera selectores tipo UL
  */
 
-namespace Render;
+namespace JidaRender;
 
 class ListaSelector extends Selector {
 

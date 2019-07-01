@@ -8,7 +8,7 @@
  * @category
  */
 
-namespace Render;
+namespace JidaRender;
 
 use Jida\Core as Core;
 

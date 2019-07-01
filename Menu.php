@@ -10,7 +10,7 @@
  * @category Render
  */
 
-namespace Render;
+namespace JidaRender;
 
 use App\Config\Configuracion;
 use Jida\Configuracion\Config;

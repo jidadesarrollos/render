@@ -8,7 +8,7 @@
  * @category
  */
 
-namespace Render;
+namespace JidaRender;
 
 use Jida\BD\BD as BD;
 use Jida\Medios as Medios;

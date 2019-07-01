@@ -6,7 +6,7 @@
  * Time: 20:12
  */
 
-namespace Render;
+namespace JidaRender;
 
 class regexp {
 

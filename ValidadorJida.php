@@ -8,7 +8,7 @@
  * @version  1.7.1 05/04/2014
  */
 
-namespace Render;
+namespace JidaRender;
 
 class ValidadorJida extends \Jida\Core\Validador {
 

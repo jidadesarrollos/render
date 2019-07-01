@@ -3,7 +3,7 @@
  * Clase para TablaSelector
  */
 
-namespace Render;
+namespace JidaRender;
 
 use Exception;
 
