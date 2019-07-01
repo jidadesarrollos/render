@@ -4,7 +4,7 @@
  *
  */
 
-namespace JidaRender;
+namespace Render;
 
 use Jida\Core\Tema;
 use Jida\Medios as Medios;

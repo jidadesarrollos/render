@@ -1,6 +1,6 @@
 <?php
 
-namespace JidaRender;
+namespace Render;
 
 class CloneSelector extends Selector {
     use \Jida\Core\ObjetoManager;

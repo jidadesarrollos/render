@@ -6,7 +6,7 @@ con validación y data obtenida de base de datos.
 Sinopsis
 ---
 ```php
-class \JidaRender\Formulario extends Selector{
+class \Render\Formulario extends Selector{
  ....
 }
 ```
@@ -14,7 +14,7 @@ Instancia
 ---
 ```php
 
-$form = new \JidaRender\Formularios($ruta[, $update]);
+$form = new \Render\Formularios($ruta[, $update]);
 ```
 
 Parametros

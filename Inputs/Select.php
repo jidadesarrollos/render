@@ -8,12 +8,12 @@
  * @category
  */
 
-namespace JidaRender\Inputs;
+namespace Render\Inputs;
 
 use Jida\BD\BD as BD;
 use Jida\Medios as Medios;
 use Exception as Excepcion;
-use JidaRender\Selector as Selector;
+use Render\Selector as Selector;
 
 class Select extends InputBase implements SeleccionInterface {
 
@@ -60,7 +60,7 @@ class Select extends InputBase implements SeleccionInterface {
      * @param string opcion Valor o label de la opción requerida
      *
      * @return Object Selector
-     * @see \JidaRender\Selector
+     * @see \Render\Selector
      */
     function opcion($opcion) {
 

@@ -1,5 +1,5 @@
 <?php
-namespace JidaRender\Inputs;
+namespace Render\Inputs;
 
 interface SeleccionInterface {
 

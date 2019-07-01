@@ -8,7 +8,7 @@
  * @category
  */
 
-namespace JidaRender;
+namespace Render;
 class ColumnaSelector extends Selector {
 
     function __construct($selector = "TD") {

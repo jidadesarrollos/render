@@ -8,7 +8,7 @@
  * @category
  */
 
-namespace JidaRender;
+namespace Render;
 
 class JOpcionMenu extends Selector {
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace JidaRender\Inputs;
+namespace Render\Inputs;
 
 use Jida\BD\BD as BD;
 use Jida\Medios as Medios;
 use Exception as Excepcion;
-use JidaRender\CloneSelector as CloneSelector;
-use JidaRender\Selector as Selector;
+use Render\CloneSelector as CloneSelector;
+use Render\Selector as Selector;
 
 trait Seleccion {
 

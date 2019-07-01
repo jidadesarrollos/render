@@ -4,7 +4,7 @@
  *
  */
 
-namespace JidaRender;
+namespace Render;
 
 use Jida\BD as BD;
 

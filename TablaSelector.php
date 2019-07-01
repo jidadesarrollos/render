@@ -3,7 +3,7 @@
  * Clase para TablaSelector
  */
 
-namespace JidaRender;
+namespace Render;
 
 use Exception;
 
@@ -52,7 +52,7 @@ class TablaSelector extends Selector {
      *
      * @param array $data Arreglo de Titulos a ser pasados al objeto
      * FilaSelector
-     * @see JidaRender\FilaSelector
+     * @see Render\FilaSelector
      */
     function crearTHead($data) {
         $this->dataThead = $data;

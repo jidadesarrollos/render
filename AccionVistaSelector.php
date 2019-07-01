@@ -8,7 +8,7 @@
  * @category
  */
 
-namespace JidaRender;
+namespace Render;
 
 use Jida\Medios as Medios;
 
