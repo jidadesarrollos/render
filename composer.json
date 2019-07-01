@@ -1,0 +1,17 @@
+{
+  "name": "jida/render",
+  "description": "Libreria para renderización dinamica de elementos HTML",
+  "type": "Library",
+  "minimum-stability": "dev",
+  "license": "mit",
+  "authors": [
+    {
+      "name": "jrodriguez",
+      "email": "jrodriguez@jidadesarrollos.com"
+    }
+  ],
+  "require": {
+    "jida/jida": "*",
+    "php": ">=7.0"
+  }
+}
