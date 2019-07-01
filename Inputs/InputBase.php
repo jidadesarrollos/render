@@ -1,8 +1,8 @@
 <?php
 
-namespace Render\Inputs;
+namespace JidaRender\Inputs;
 
-use Render\Selector as Selector;
+use JidaRender\Selector as Selector;
 
 
 abstract class InputBase extends Selector {
@@ -58,7 +58,7 @@ abstract class InputBase extends Selector {
      */
     protected function estructura($estructura) {
 
-        if (property_exists('\Render\Inputs\Estructura', $estructura)) {
+        if (property_exists('\JidaRender\Inputs\Estructura', $estructura)) {
             return Estructura::$$estructura;
         }
 

@@ -20,7 +20,7 @@ use Jida\Core\Rutas;
 use Jida\Medios as Medios;
 use Jida\BD\BD as BD;
 use Jida\Manager\Estructura;
-use Render\Inputs\Input as SelectorInput;
+use JidaRender\Inputs\Input as SelectorInput;
 
 class Formulario extends Selector {
 
@@ -461,7 +461,7 @@ class Formulario extends Selector {
      * @internal gestiona los campos del formulario realizando una instancia
      * del objeto SelectorInput sobre cada campo para su posterior renderizacion
      * @method _instanciarCamposConfiguracion
-     * @see      \Render\SelectorInput
+     * @see      \JidaRender\SelectorInput
      * @use      self::labels
      */
     private function _instanciarCamposConfiguracion() {

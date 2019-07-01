@@ -8,12 +8,12 @@
  * @category
  */
 
-namespace Render\Inputs;
+namespace JidaRender\Inputs;
 
 use Jida\BD\BD as BD;
 use Jida\Medios as Medios;
 use Exception as Excepcion;
-use Render\Selector;
+use JidaRender\Selector;
 
 
 class InputSeleccion extends InputBase implements SeleccionInterface {

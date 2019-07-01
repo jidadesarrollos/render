@@ -6,7 +6,7 @@
  *
  */
 
-namespace Render\Inputs;
+namespace JidaRender\Inputs;
 
 class Estructura {
 

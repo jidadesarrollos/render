@@ -52,7 +52,7 @@ class TablaSelector extends Selector {
      *
      * @param array $data Arreglo de Titulos a ser pasados al objeto
      * FilaSelector
-     * @see Render\FilaSelector
+     * @see JidaRender\FilaSelector
      */
     function crearTHead($data) {
         $this->dataThead = $data;
