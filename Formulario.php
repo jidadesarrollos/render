@@ -244,8 +244,8 @@ class Formulario extends Selector {
 
         $this->action = Estructura::url();
         $this->attr('action', $this->action);
-
         parent::__construct('form');
+
 
     }
 
