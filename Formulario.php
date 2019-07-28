@@ -15,12 +15,13 @@
 
 namespace JidaRender;
 
-use Jida\Manager\Excepcion;
-use Jida\Core\Rutas;
-use Jida\Medios as Medios;
 use Jida\BD\BD as BD;
 use Jida\Manager\Estructura;
+use Jida\Manager\Excepcion;
+use Jida\Medios as Medios;
 use JidaRender\Inputs\Input as SelectorInput;
+use JidaRender\Inputs\InputSeleccion;
+use JidaRender\Inputs\Select;
 
 class Formulario extends Selector {
 
@@ -29,13 +30,13 @@ class Formulario extends Selector {
      *
      * @var $_ce ;
      */
-    static private $_ce     = 20001;
-    public         $name;
-    public         $tagPost = true;
-    public         $action  = "";
-    public         $method  = "POST";
-    public         $enctype = "application/x-www-form-urlencoded";
-    public         $target  = "";
+    static private $_ce = 20001;
+    public $name;
+    public $tagPost = true;
+    public $action = "";
+    public $method = "POST";
+    public $enctype = "application/x-www-form-urlencoded";
+    public $target = "";
 
     /**
      * Determina si los valores del formulario deben ser validados o cambiados a entidades HTML
@@ -69,7 +70,7 @@ class Formulario extends Selector {
      *
      * @var string $_labelBotonEnvio
      */
-    public  $_labelBotonEnvio = "Guardar";
+    public $_labelBotonEnvio = "Guardar";
     /**
      * Define si el formulario lleva labels o no
      *
@@ -91,7 +92,7 @@ class Formulario extends Selector {
      * @var string $_consultaUpdate
      */
     private $_consultaUpdate = "";
-    private $_fieldsets       = [];
+    private $_fieldsets = [];
     /**
      * @var string $_id id del formulario
      * @access private
@@ -118,7 +119,7 @@ class Formulario extends Selector {
      * @public $_plantillaItem
      * @access private
      */
-    private $_plantillaItem    =
+    private $_plantillaItem =
         '
 	<section class="col-md-{{:cols}}">
 		<div class="form-group">
@@ -148,7 +149,7 @@ class Formulario extends Selector {
      * @var int $_columnasTotal
      */
     private $_columnasTotal = 12;
-    private $_css           = [
+    private $_css = [
         'input'             => 'form-control',
         'titulo'            => 'titulo-form',
         'columnaBotones'    => 'col-md-12 text-right',
@@ -246,7 +247,6 @@ class Formulario extends Selector {
         $this->attr('action', $this->action);
         parent::__construct('form');
 
-
     }
 
     /**
@@ -303,8 +303,16 @@ class Formulario extends Selector {
         $ruta = Estructura::$rutaJida;
 
         if (strtolower($jida) != 'jida') {
-            if (strtolower($jida) === 'jadmin')
-                $ruta = Estructura::$directorio . '/Jadmin';
+            if (strtolower($jida) === 'jadmin') {
+
+                $form = array_shift($partes);
+                if ($form === strtolower(Estructura::$modulo)) {
+                    $form = array_shift($partes);
+                }
+
+                $ruta = Estructura::$rutaModulo . '/Formularios/' . ucfirst($form);
+                return $ruta;
+            }
             else {
                 $ruta = Estructura::$directorio . '/Aplicacion';
                 array_unshift($partes, $jida);
@@ -1072,3 +1080,4 @@ class Formulario extends Selector {
     }
 
 }
+

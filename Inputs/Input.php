@@ -10,16 +10,11 @@
 
 namespace JidaRender\Inputs;
 
-use Jida\BD\BD as BD;
 use Jida\Medios as Medios;
-use Exception as Excepcion;
-use JidaRender\CloneSelector as CloneSelector;
-use JidaRender\Selector as Selector;
 
 class Input extends InputBase {
 
-
-    function __construct (\stdClass $params, $attr = false) {
+    function __construct(\stdClass $params, $attr = false) {
 
         if (property_exists($params, 'data')) {
 
@@ -48,7 +43,7 @@ class Input extends InputBase {
 
     }
 
-    private function _crearSelector () {
+    private function _crearSelector() {
 
         switch ($this->_tipo) {
 
@@ -66,26 +61,26 @@ class Input extends InputBase {
 
     }
 
-    private function _crearTextArea () {
+    private function _crearTextArea() {
 
         $this->_attr = array_merge($this->_attr,
-                                   [
-                                       'type' => $this->_tipo,
-                                       'name' => $this->_name
-                                   ]);
+            [
+                'type' => $this->_tipo,
+                'name' => $this->_name
+            ]);
         parent::__construct($this->_tipo, $this->_attr);
 
     }
 
-    function _crearBoton () {
+    function _crearBoton() {
 
         $this->_attr = array_merge($this->_attr,
-                                   [
-                                       'type' => $this->_tipo,
-                                       'name' => $this->_name,
-                                       'id'   => $this->id,
+            [
+                'type' => $this->_tipo,
+                'name' => $this->_name,
+                'id'   => $this->id,
 
-                                   ]
+            ]
         );
 
         parent::__construct('button', $this->_attr);
@@ -93,23 +88,23 @@ class Input extends InputBase {
         $this->innerHTML($this->_html);
     }
 
-    function _crearInput () {
+    function _crearInput() {
 
         $this->_attr = array_merge($this->_attr,
-                                   [
-                                       'type'        => $this->_tipo,
-                                       'name'        => $this->_name,
-                                       'id'          => $this->id,
-                                       'value'       => $this->value,
-                                       'placeholder' => $this->placeholder
-                                   ]
+            [
+                'type'        => $this->_tipo,
+                'name'        => $this->_name,
+                'id'          => $this->id,
+                'value'       => $this->value,
+                'placeholder' => $this->placeholder
+            ]
         );
-        parent::__construct('input', $this->_attr);
 
+        parent::__construct('input', $this->_attr);
 
     }
 
-    function valor ($valor) {
+    function valor($valor) {
 
         if ($this->type == 'textarea') {
             $this->innerHTML($valor);

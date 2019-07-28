@@ -10,9 +10,7 @@
 
 namespace JidaRender\Inputs;
 
-use Jida\BD\BD as BD;
 use Jida\Medios as Medios;
-use Exception as Excepcion;
 use JidaRender\Selector as Selector;
 
 class Select extends InputBase implements SeleccionInterface {
@@ -27,7 +25,7 @@ class Select extends InputBase implements SeleccionInterface {
         ];
         $attr = array_merge($atributos, $attr);
         $this->establecerAtributos($data, $this);
-
+        $this->_crearSelector($data);
         if (array_key_exists('padre', $attr)) {
             $this->_padre = $attr['padre'];
             unset($attr['padre']);
@@ -41,6 +39,25 @@ class Select extends InputBase implements SeleccionInterface {
 
     }
 
+    function _crearSelector($data) {
+
+        $this->_attr = array_merge($this->_attr,
+            [
+                'type'        => $this->_tipo,
+                'name'        => $this->_name,
+                'id'          => $this->id,
+                'value'       => $this->value,
+                'placeholder' => $this->placeholder
+            ]
+        );
+        if (property_exists($data, 'class')) {
+            $this->addClass($data->class);
+        }
+        #Medios\Debug::imprimir([$data->class, $this->_attr]);
+
+        parent::__construct('input', $this->_attr);
+
+    }
 
     function render() {
 
@@ -68,10 +85,11 @@ class Select extends InputBase implements SeleccionInterface {
 
         if (array_key_exists($opcion, $this->_opciones)) {
             $salida = $this->_selectoresOpcion[$opcion];
-        } else if (in_array($opcion, $this->_opciones)) {
+        }
+        else if (in_array($opcion, $this->_opciones)) {
 
-
-        } else {
+        }
+        else {
             throw new \Exception('La opción solicitada no existe', $this->_ce . '000001');
         }
 
@@ -106,6 +124,5 @@ class Select extends InputBase implements SeleccionInterface {
         }
 
     }
-
 
 }
