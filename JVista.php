@@ -35,7 +35,7 @@ class JVista {
      * @var $configFilaOpciones
      */
     private $configFilaOpciones = [
-        "html" => 'Opciones',
+        "html" => '',
         "attr" => [
             'class' => 'fila-opciones'
         ]
